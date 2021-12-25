@@ -6,6 +6,7 @@ import (
 	"strings"
 
 	"github.com/strickyak/jerbo/v2/os9defs"
+	"github.com/strickyak/jerbo/v2/undisk"
 )
 
 func main() {
@@ -21,6 +22,7 @@ func main() {
 
 	commandMap := map[string]func(){
 		"os9defs": func() { os9defs.Main() },
+		"undisk": func() { undisk.Main() },
 	}
 
 	if fn, ok := commandMap[command]; ok {
